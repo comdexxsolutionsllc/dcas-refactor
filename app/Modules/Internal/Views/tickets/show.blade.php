@@ -17,7 +17,7 @@
                     <div class="ticket-info">
                         <p>Category: &nbsp; {{ $category->name }}</p>
                         <div style="float: left; width: auto;">
-                            Status:  @include('Internal::partials.ticket_status')
+                            Status: @include('Internal::partials.ticket_status')
                         </div>
                         <p style="clear: both"></p>
                         <p>Created on: {{ $ticket->created_at->diffForHumans() }}</p>
@@ -67,5 +67,22 @@
                     </div>
                 </div>
             </div>
+
+            <div class="panel">
+                <ul style="list-style-type:none">
+                    @foreach($ticket['comments'] as $comments)
+                        @foreach($comments->revisionHistory as $history)
+                            @if($history->key == 'created_at' && !$history->old_value)
+                                <li>{{ $history->userResponsible()->name }} created this resource
+                                    at {{ $history->newValue() }}</li>
+                            @else
+                                <li>{{ $history->userResponsible()->name }} changed {{ $history->fieldName() }}
+                                    from {{ $history->oldValue() }} to {{ $history->newValue() }}</li>
+                            @endif
+                        @endforeach
+                    @endforeach
+                </ul>
+            </div>
+
         </div>
 @endsection

@@ -48,8 +48,9 @@ abstract class BaseModel extends Revisionable implements AuditableContract, HasB
 
     /**
      * @var bool
+     * TODO: Fix duplication of 'created' event
      */
-    protected $revisionEnabled = true;
+    protected $revisionEnabled = false;
 
     /**
      * @var int
@@ -65,4 +66,16 @@ abstract class BaseModel extends Revisionable implements AuditableContract, HasB
      * @var bool
      */
     protected $revisionCreationsEnabled = true;
+
+    /**
+     * @var string
+     */
+    protected $revisionNullString = 'nothing';
+
+    /**
+     * @var string
+     */
+    protected $revisionUnknownString = 'unknown';
+
+    public static function boot() { parent::boot(); }
 }
