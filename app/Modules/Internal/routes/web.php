@@ -8,7 +8,7 @@ Route::group(['prefix' => 'internal', 'module' => 'Internal', 'middleware' => ['
     Route::get('tickets/{ticket_id}', 'TicketsController@show');
 
     Route::get('tickets', function() {
-        return redirect('admin/tickets');
+        return redirect('/internal/admin/tickets');
     });
 
     Route::group(['prefix' => 'admin'], function () { //'middleware' => 'admin'

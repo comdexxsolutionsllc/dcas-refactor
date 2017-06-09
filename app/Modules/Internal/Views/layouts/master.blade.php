@@ -7,6 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+    <style>
+        span#status {
+            width: 200px;
+            float: @if(!\Request::is('internal/my_tickets') && !\Request::is('internal/admin/tickets')) right @else left @endif ;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
