@@ -1,0 +1,88 @@
+{
+  "name": "dcas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "Sarah Renner",
+  "license": "Closed Source",
+  "private": true,
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "axios": "^0.15.3",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "bootstrap-sass": "^3.3.7",
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
+    "browser-env": "^2.0.21",
+    "bufferutil": "^1.3.0",
+    "bulma": "^0.2.3",
+    "csstyle": "^1.5.0",
+    "fixmyjs": "^1.0.3",
+    "foundation-cli": "^2.1.0",
+    "html-minify-loader": "^1.1.0",
+    "image-webpack-loader": "^3.2.0",
+    "jimp": "^0.2.27",
+    "jquery": "^3.1.1",
+    "laravel-mix": "^0.11.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "normalize.css": "^5.0.0",
+    "responsive-loader": "^0.7.0",
+    "sprite-loader": "^0.2.4",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
+    "vue": "^2.1.10",
+    "vue-resource": "^0.9.3",
+    "vue-router": "^2.0.0",
+    "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "cross-env": "^3.2.3",
+    "forever": "^0.15.3",
+    "foundation": "^4.2.1-1",
+    "laravel-echo": "^1.3.0",
+    "materialize": "^1.0.0",
+    "materialize-css": "^0.98.0",
+    "pusher-js": "^4.1.0",
+    "raw-loader": "^0.5.1",
+    "sweetalert": "^1.1.3",
+    "underscore": "^1.8.3",
+    "vue-chat-scroll": "^1.0.1",
+    "vue-meta": "^0.5.3",
+    "vue-moment": "^2.0.2",
+    "vue-resource": "^0.9.3",
+    "vue-stash": "^2.0.1-beta",
+    "vue-sticky-scroll": "^0.1.0",
+    "vue-viewports": "^2.2.0",
+    "vuex": "^2.1.2"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./tests/Javascript/helpers/setup-browser-env.js"
+    ],
+    "files": [
+      "./tests/Javascript/**/*.js",
+      "!./tests/Javascript/helpers/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "tap": false,
+    "powerAssert": false,
+    "verbose": true
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}

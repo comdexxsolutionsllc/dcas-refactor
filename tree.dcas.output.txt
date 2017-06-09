@@ -1,0 +1,593 @@
+/Users/srenner/Code/dcas
+├── /Users/srenner/Code/dcas/PERMISSION.list.txt
+├── /Users/srenner/Code/dcas/ROLE.list.txt
+├── /Users/srenner/Code/dcas/_ide_helper.php
+├── /Users/srenner/Code/dcas/app
+│   ├── /Users/srenner/Code/dcas/app/ActivityExtend.php
+│   ├── /Users/srenner/Code/dcas/app/AuditDrivers
+│   │   └── /Users/srenner/Code/dcas/app/AuditDrivers/TestAuditDriver.php
+│   ├── /Users/srenner/Code/dcas/app/BaseModel.php
+│   ├── /Users/srenner/Code/dcas/app/Click.php
+│   ├── /Users/srenner/Code/dcas/app/Console
+│   │   ├── /Users/srenner/Code/dcas/app/Console/Commands
+│   │   │   └── /Users/srenner/Code/dcas/app/Console/Commands/CopyBashSetup.php
+│   │   └── /Users/srenner/Code/dcas/app/Console/Kernel.php
+│   ├── /Users/srenner/Code/dcas/app/DCASDomain
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Contracts
+│   │   │   └── /Users/srenner/Code/dcas/app/DCASDomain/Contracts/RepositoryContract.php
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Enumerations
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Facades
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Observers
+│   │   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Observers/ActivityObserver.php
+│   │   │   └── /Users/srenner/Code/dcas/app/DCASDomain/Observers/UserObserver.php
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Presenters
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Scoping
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Services
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Support
+│   │   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Support/FileStore.php
+│   │   │   └── /Users/srenner/Code/dcas/app/DCASDomain/Support/Sanitizer.php
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Traits
+│   │   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Traits/Encryptable.php
+│   │   │   └── /Users/srenner/Code/dcas/app/DCASDomain/Traits/GetRemoteIP.php
+│   │   ├── /Users/srenner/Code/dcas/app/DCASDomain/Translations
+│   │   └── /Users/srenner/Code/dcas/app/DCASDomain/ViewComposers
+│   │       └── /Users/srenner/Code/dcas/app/DCASDomain/ViewComposers/DashboardComposer.php
+│   ├── /Users/srenner/Code/dcas/app/Exceptions
+│   │   ├── /Users/srenner/Code/dcas/app/Exceptions/DCASDomainErrorHelper.php
+│   │   └── /Users/srenner/Code/dcas/app/Exceptions/Handler.php
+│   ├── /Users/srenner/Code/dcas/app/Fragment.php
+│   ├── /Users/srenner/Code/dcas/app/Http
+│   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/AppBaseController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/Auth
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/Auth/ForgotPasswordController.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/Auth/LoginController.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/Auth/RegisterController.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Http/Controllers/Auth/ResetPasswordController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/Controller.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/HomeController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/PagesController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/PurchasesController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/RoleController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Http/Controllers/UserController.php
+│   │   │   └── /Users/srenner/Code/dcas/app/Http/Controllers/WebhookController.php
+│   │   ├── /Users/srenner/Code/dcas/app/Http/Kernel.php
+│   │   └── /Users/srenner/Code/dcas/app/Http/Middleware
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/AddAccessControlAllowOriginHeader.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/AdminMiddleware.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/EncryptCookies.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/Impersonate.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/LogLastUserActivity.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/RedirectIfAuthenticated.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/RestrictByIP.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/SessionTimeout.php
+│   │       ├── /Users/srenner/Code/dcas/app/Http/Middleware/TrimStrings.php
+│   │       └── /Users/srenner/Code/dcas/app/Http/Middleware/VerifyCsrfToken.php
+│   ├── /Users/srenner/Code/dcas/app/Listeners
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/Database
+│   │   │   └── /Users/srenner/Code/dcas/app/Listeners/Database/LogQueryExecution.php
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/LogCacheHit.php
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/LogCacheMissed.php
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/LogKeyForgotten.php
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/LogKeyWritten.php
+│   │   ├── /Users/srenner/Code/dcas/app/Listeners/Mail
+│   │   │   └── /Users/srenner/Code/dcas/app/Listeners/Mail/LogSentMessage.php
+│   │   └── /Users/srenner/Code/dcas/app/Listeners/Users
+│   │       ├── /Users/srenner/Code/dcas/app/Listeners/Users/UpdateLastLoggedInAt.php
+│   │       ├── /Users/srenner/Code/dcas/app/Listeners/Users/UponLoginLockout.php
+│   │       └── /Users/srenner/Code/dcas/app/Listeners/Users/UponLogoutUpdateLastLoggedInAt.php
+│   ├── /Users/srenner/Code/dcas/app/Mail
+│   │   └── /Users/srenner/Code/dcas/app/Mail/UponUserLoginLockout.php
+│   ├── /Users/srenner/Code/dcas/app/Modules
+│   │   ├── /Users/srenner/Code/dcas/app/Modules/Api
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Controllers
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Controllers/ApiController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Exceptions
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Exceptions/NotAcceptableException.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Exceptions/UnsupportedMediaTypeException.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Facades
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Facades/ApiHelper.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Helpers
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Helpers/ApiHelper.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Models
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Models/Api.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Models/ApiHelper.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Translations
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Translations/en
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Api/Translations/en/example.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/Views
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/Views/index.blade.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Api/helper.php
+│   │   │   └── /Users/srenner/Code/dcas/app/Modules/Api/routes
+│   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Api/routes/api.php
+│   │   │       └── /Users/srenner/Code/dcas/app/Modules/Api/routes/web.php
+│   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/css
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/css/chat-vendor.css
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/css/chat.css
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js/components
+│   │   │   │           ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js/components/ChatApp.vue
+│   │   │   │           ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js/components/ChatForm.vue
+│   │   │   │           ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js/components/ChatMessages.vue
+│   │   │   │           └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Assets/js/components/UserList.vue
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Database
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Database/Migrations
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Database/Migrations/2017_02_24_131358_create_chat_messages_table.php
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Database/Migrations/2017_03_01_000000_create_chat_users_table.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Entities
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Entities/ChatMessage.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Entities/ChatUser.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Events
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Events/Handlers
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Events/MessageSent.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Events/UserAdded.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Events/UserRemoved.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/Controllers
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/Controllers/ChatController.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/Middleware
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/Middleware/RestrictByIP.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/Requests
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Http/routes.php
+│   │   │   └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources
+│   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources/lang
+│   │   │       └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources/views
+│   │   │           ├── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources/views/chat.blade.php
+│   │   │           └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources/views/layouts
+│   │   │               └── /Users/srenner/Code/dcas/app/Modules/Chat.disabled/Resources/views/layouts/master.blade.php
+│   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Classes
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Classes/TicketId.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Controllers
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Controllers/CommentsController.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Controllers/InternalController.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Controllers/TicketsController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Database
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Database/Migrations
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Database/Migrations/2017_02_22_210642_create_tickets_table.php
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Database/Migrations/2017_02_22_210652_create_categories_table.php
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Internal/Database/Migrations/2017_02_23_210652_create_comments_table.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Emails
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Emails/AppMailer.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Middleware
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Middleware/AdminMiddleware.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Models
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Models/Category.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Models/Comment.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Models/Internal.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Models/Ticket.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/cn
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/de
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/en
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/en/example.json
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/es
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/es/example.json
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/fr
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Translations/jp
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/emails
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/emails/ticket_comments.blade.php
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/emails/ticket_info.blade.php
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Views/emails/ticket_status.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/includes
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Views/includes/flash.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/index.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/layouts
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Views/layouts/master.blade.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/create.blade.php
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/edit.blade.php
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/home.blade.php
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/index.blade.php
+│   │   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/show.blade.php
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Internal/Views/tickets/user_tickets.blade.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Internal/helper.php
+│   │   │   └── /Users/srenner/Code/dcas/app/Modules/Internal/routes
+│   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Internal/routes/api.php
+│   │   │       └── /Users/srenner/Code/dcas/app/Modules/Internal/routes/web.php
+│   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Config
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Config/messenger.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Controllers
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Controllers/MessagesController.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Controllers/MessengerController.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations/2014_10_28_175635_create_threads_table.php
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations/2014_10_28_175710_create_messages_table.php
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations/2014_10_28_180224_create_participants_table.php
+│   │   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations/2014_11_03_154831_add_soft_deletes_to_participants_table.php
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Migrations/2014_12_04_124531_add_softdeletes_to_threads_table.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Seeders
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/Seeders/MessengerDatabaseSeeder.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Database/remove_foreign_keys.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Middleware
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Middleware/RestrictByIP.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Models
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Models/Messenger.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Translations
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Translations/en
+│   │   │   │       └── /Users/srenner/Code/dcas/app/Modules/Messenger/Translations/en/example.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Views
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/create.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/index.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/layouts
+│   │   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/layouts/master.blade.php
+│   │   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/show.blade.php
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/Views/unread-count.blade.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/helper.php
+│   │   │   ├── /Users/srenner/Code/dcas/app/Modules/Messenger/messenger-examples
+│   │   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/messenger-examples/create_users_table.php
+│   │   │   └── /Users/srenner/Code/dcas/app/Modules/Messenger/routes
+│   │   │       ├── /Users/srenner/Code/dcas/app/Modules/Messenger/routes/api.php
+│   │   │       └── /Users/srenner/Code/dcas/app/Modules/Messenger/routes/web.php
+│   │   └── /Users/srenner/Code/dcas/app/Modules/Panel
+│   │       ├── /Users/srenner/Code/dcas/app/Modules/Panel/Controllers
+│   │       │   └── /Users/srenner/Code/dcas/app/Modules/Panel/Controllers/PanelController.php
+│   │       ├── /Users/srenner/Code/dcas/app/Modules/Panel/Models
+│   │       │   └── /Users/srenner/Code/dcas/app/Modules/Panel/Models/Panel.php
+│   │       ├── /Users/srenner/Code/dcas/app/Modules/Panel/Translations
+│   │       │   └── /Users/srenner/Code/dcas/app/Modules/Panel/Translations/en
+│   │       │       └── /Users/srenner/Code/dcas/app/Modules/Panel/Translations/en/example.php
+│   │       ├── /Users/srenner/Code/dcas/app/Modules/Panel/Views
+│   │       │   └── /Users/srenner/Code/dcas/app/Modules/Panel/Views/index.blade.php
+│   │       ├── /Users/srenner/Code/dcas/app/Modules/Panel/helper.php
+│   │       └── /Users/srenner/Code/dcas/app/Modules/Panel/routes
+│   │           ├── /Users/srenner/Code/dcas/app/Modules/Panel/routes/api.php
+│   │           └── /Users/srenner/Code/dcas/app/Modules/Panel/routes/web.php
+│   ├── /Users/srenner/Code/dcas/app/NullCategory.php
+│   ├── /Users/srenner/Code/dcas/app/NullPermission.php
+│   ├── /Users/srenner/Code/dcas/app/NullRole.php
+│   ├── /Users/srenner/Code/dcas/app/NullUser.php
+│   ├── /Users/srenner/Code/dcas/app/Permission.php
+│   ├── /Users/srenner/Code/dcas/app/Policies
+│   │   ├── /Users/srenner/Code/dcas/app/Policies/CategoryPolicy.php
+│   │   ├── /Users/srenner/Code/dcas/app/Policies/CommentPolicy.php
+│   │   ├── /Users/srenner/Code/dcas/app/Policies/PermissionPolicy.php
+│   │   ├── /Users/srenner/Code/dcas/app/Policies/RolePolicy.php
+│   │   └── /Users/srenner/Code/dcas/app/Policies/TicketPolicy.php
+│   ├── /Users/srenner/Code/dcas/app/Providers
+│   │   ├── /Users/srenner/Code/dcas/app/Providers/AppServiceProvider.php
+│   │   ├── /Users/srenner/Code/dcas/app/Providers/AuthServiceProvider.php
+│   │   ├── /Users/srenner/Code/dcas/app/Providers/BroadcastServiceProvider.php
+│   │   ├── /Users/srenner/Code/dcas/app/Providers/DcasApiServiceProvider.php
+│   │   ├── /Users/srenner/Code/dcas/app/Providers/EventServiceProvider.php
+│   │   └── /Users/srenner/Code/dcas/app/Providers/RouteServiceProvider.php
+│   ├── /Users/srenner/Code/dcas/app/Role.php
+│   ├── /Users/srenner/Code/dcas/app/Spec
+│   │   └── /Users/srenner/Code/dcas/app/Spec/DCASDomain
+│   │       └── /Users/srenner/Code/dcas/app/Spec/DCASDomain/Support
+│   │           └── /Users/srenner/Code/dcas/app/Spec/DCASDomain/Support/SanitizerSpec.php
+│   ├── /Users/srenner/Code/dcas/app/User.php
+│   └── /Users/srenner/Code/dcas/app/templates
+│       ├── /Users/srenner/Code/dcas/app/templates/Data
+│       │   ├── /Users/srenner/Code/dcas/app/templates/Data/Controller.php
+│       │   └── /Users/srenner/Code/dcas/app/templates/Data/Migration.php
+│       ├── /Users/srenner/Code/dcas/app/templates/controller.txt
+│       ├── /Users/srenner/Code/dcas/app/templates/migration.txt
+│       ├── /Users/srenner/Code/dcas/app/templates/model.txt
+│       ├── /Users/srenner/Code/dcas/app/templates/scaffolding
+│       │   ├── /Users/srenner/Code/dcas/app/templates/scaffolding/controller.txt
+│       │   └── /Users/srenner/Code/dcas/app/templates/scaffolding/model.txt
+│       ├── /Users/srenner/Code/dcas/app/templates/schema.txt
+│       ├── /Users/srenner/Code/dcas/app/templates/seed.txt
+│       └── /Users/srenner/Code/dcas/app/templates/view.txt
+├── /Users/srenner/Code/dcas/artisan
+├── /Users/srenner/Code/dcas/behat.yml
+├── /Users/srenner/Code/dcas/bin
+│   ├── /Users/srenner/Code/dcas/bin/behat
+│   ├── /Users/srenner/Code/dcas/bin/branch-status
+│   ├── /Users/srenner/Code/dcas/bin/phing
+│   ├── /Users/srenner/Code/dcas/bin/php-cs-fixer
+│   ├── /Users/srenner/Code/dcas/bin/phpcbf
+│   ├── /Users/srenner/Code/dcas/bin/phpcs
+│   └── /Users/srenner/Code/dcas/bin/phpmd
+├── /Users/srenner/Code/dcas/bootstrap
+│   ├── /Users/srenner/Code/dcas/bootstrap/app.php
+│   ├── /Users/srenner/Code/dcas/bootstrap/autoload.php
+│   └── /Users/srenner/Code/dcas/bootstrap/cache
+│       └── /Users/srenner/Code/dcas/bootstrap/cache/services.php
+├── /Users/srenner/Code/dcas/bower.json
+├── /Users/srenner/Code/dcas/codeception.yml
+├── /Users/srenner/Code/dcas/composer.json
+├── /Users/srenner/Code/dcas/composer.lock
+├── /Users/srenner/Code/dcas/config
+│   ├── /Users/srenner/Code/dcas/config/amranidev
+│   │   └── /Users/srenner/Code/dcas/config/amranidev/config.php
+│   ├── /Users/srenner/Code/dcas/config/api_info.json
+│   ├── /Users/srenner/Code/dcas/config/app.php
+│   ├── /Users/srenner/Code/dcas/config/audit.php
+│   ├── /Users/srenner/Code/dcas/config/auth.php
+│   ├── /Users/srenner/Code/dcas/config/broadcasting.php
+│   ├── /Users/srenner/Code/dcas/config/cache.php
+│   ├── /Users/srenner/Code/dcas/config/cors.php
+│   ├── /Users/srenner/Code/dcas/config/database.php
+│   ├── /Users/srenner/Code/dcas/config/datatables.php
+│   ├── /Users/srenner/Code/dcas/config/debugbar.php
+│   ├── /Users/srenner/Code/dcas/config/eloquentfilter.php
+│   ├── /Users/srenner/Code/dcas/config/entrust.php
+│   ├── /Users/srenner/Code/dcas/config/filesystems.php
+│   ├── /Users/srenner/Code/dcas/config/ide-helper.php
+│   ├── /Users/srenner/Code/dcas/config/image.php
+│   ├── /Users/srenner/Code/dcas/config/infyom
+│   │   └── /Users/srenner/Code/dcas/config/infyom/laravel_generator.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-cookie-consent.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-menu
+│   │   ├── /Users/srenner/Code/dcas/config/laravel-menu/settings.php
+│   │   └── /Users/srenner/Code/dcas/config/laravel-menu/views.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-permission.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-tags.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-translatable.php
+│   ├── /Users/srenner/Code/dcas/config/laravel-translation-loader.php
+│   ├── /Users/srenner/Code/dcas/config/lern.php
+│   ├── /Users/srenner/Code/dcas/config/mail.php
+│   ├── /Users/srenner/Code/dcas/config/messenger.php
+│   ├── /Users/srenner/Code/dcas/config/modules.php
+│   ├── /Users/srenner/Code/dcas/config/optimus.php
+│   ├── /Users/srenner/Code/dcas/config/pusher.php
+│   ├── /Users/srenner/Code/dcas/config/queue.php
+│   ├── /Users/srenner/Code/dcas/config/quota.php
+│   ├── /Users/srenner/Code/dcas/config/repository.php
+│   ├── /Users/srenner/Code/dcas/config/rinvex.repository.php
+│   ├── /Users/srenner/Code/dcas/config/scout.php
+│   ├── /Users/srenner/Code/dcas/config/services.php
+│   ├── /Users/srenner/Code/dcas/config/session.php
+│   ├── /Users/srenner/Code/dcas/config/settings.php
+│   ├── /Users/srenner/Code/dcas/config/tail.php
+│   ├── /Users/srenner/Code/dcas/config/terminal.php
+│   ├── /Users/srenner/Code/dcas/config/tracy.php
+│   ├── /Users/srenner/Code/dcas/config/url-signer.php
+│   ├── /Users/srenner/Code/dcas/config/usercommands.php
+│   └── /Users/srenner/Code/dcas/config/view.php
+├── /Users/srenner/Code/dcas/database
+│   ├── /Users/srenner/Code/dcas/database/factories
+│   │   └── /Users/srenner/Code/dcas/database/factories/ModelFactory.php
+│   ├── /Users/srenner/Code/dcas/database/migrations
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_10_12_000000_create_users_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_10_12_100000_create_password_resets_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_10_28_175635_create_threads_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_10_28_175710_create_messages_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_10_28_180224_create_participants_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_11_03_154831_add_soft_deletes_to_participants_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2014_12_04_124531_add_softdeletes_to_threads_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2015_08_25_172600_create_settings_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2016_01_01_000000_add_voyager_user_fields.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2016_03_17_000000_create_lern_tables.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2016_03_27_000000_add_user_data_and_url_to_lern_tables.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2016_05_31_124502_create_scheduled_events_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_035731_create_cache_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_035738_create_notifications_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_035745_create_failed_jobs_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_035749_create_jobs_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_035754_create_sessions_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_27_090352_create_subscriptions_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_01_28_033245_create_language_lines_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_02_08_140857_entrust_setup_tables.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_02_09_123128_create_clicks_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_02_22_205803_add_isadmin_to_users_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_03_04_000000_create_ban_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_05_05_221518_create_audits_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_05_07_014449_create_tag_tables.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_05_07_213924_add_banned_at_column_to_users_table.php
+│   │   ├── /Users/srenner/Code/dcas/database/migrations/2017_05_16_153059_create_fragments_table.php
+│   │   └── /Users/srenner/Code/dcas/database/migrations/2017_05_17_183105_change_users_table_column_lengths.php
+│   └── /Users/srenner/Code/dcas/database/seeds
+│       ├── /Users/srenner/Code/dcas/database/seeds/ClicksTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/DatabaseSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/LanguageLinesTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/ParticipantsTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/PermissionsTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/RolesTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/SubscriptionsTableSeeder.php
+│       ├── /Users/srenner/Code/dcas/database/seeds/ThreadsTableSeeder.php
+│       └── /Users/srenner/Code/dcas/database/seeds/UsersTableSeeder.php
+├── /Users/srenner/Code/dcas/docs
+│   ├── /Users/srenner/Code/dcas/docs/TODO.md
+│   ├── /Users/srenner/Code/dcas/docs/api
+│   └── /Users/srenner/Code/dcas/docs/web
+├── /Users/srenner/Code/dcas/emails
+│   ├── /Users/srenner/Code/dcas/emails/LICENSE
+│   ├── /Users/srenner/Code/dcas/emails/README.md
+│   ├── /Users/srenner/Code/dcas/emails/example.config.json
+│   ├── /Users/srenner/Code/dcas/emails/gulpfile.babel.js
+│   ├── /Users/srenner/Code/dcas/emails/package.json
+│   └── /Users/srenner/Code/dcas/emails/src
+│       ├── /Users/srenner/Code/dcas/emails/src/assets
+│       │   ├── /Users/srenner/Code/dcas/emails/src/assets/img
+│       │   └── /Users/srenner/Code/dcas/emails/src/assets/scss
+│       │       ├── /Users/srenner/Code/dcas/emails/src/assets/scss/_settings.scss
+│       │       └── /Users/srenner/Code/dcas/emails/src/assets/scss/app.scss
+│       ├── /Users/srenner/Code/dcas/emails/src/helpers
+│       │   └── /Users/srenner/Code/dcas/emails/src/helpers/raw.js
+│       ├── /Users/srenner/Code/dcas/emails/src/layouts
+│       │   └── /Users/srenner/Code/dcas/emails/src/layouts/default.html
+│       ├── /Users/srenner/Code/dcas/emails/src/pages
+│       │   └── /Users/srenner/Code/dcas/emails/src/pages/index.html
+│       └── /Users/srenner/Code/dcas/emails/src/partials
+├── /Users/srenner/Code/dcas/features
+│   ├── /Users/srenner/Code/dcas/features/bootstrap
+│   │   ├── /Users/srenner/Code/dcas/features/bootstrap/FeatureContext.php
+│   │   └── /Users/srenner/Code/dcas/features/bootstrap/GeneralContext.php
+│   ├── /Users/srenner/Code/dcas/features/environment_check.feature
+│   └── /Users/srenner/Code/dcas/features/login.feature
+├── /Users/srenner/Code/dcas/integrated.json
+├── /Users/srenner/Code/dcas/package.json
+├── /Users/srenner/Code/dcas/phpspec.yml
+├── /Users/srenner/Code/dcas/phpunit.xml
+├── /Users/srenner/Code/dcas/public
+│   ├── /Users/srenner/Code/dcas/public/css
+│   │   ├── /Users/srenner/Code/dcas/public/css/app.3021de8985922f18c1c546e53e5b23aa.css
+│   │   ├── /Users/srenner/Code/dcas/public/css/chat.css
+│   │   └── /Users/srenner/Code/dcas/public/css/scaffold-interface-css
+│   │       └── /Users/srenner/Code/dcas/public/css/scaffold-interface-css/main.css
+│   ├── /Users/srenner/Code/dcas/public/favicon.ico
+│   ├── /Users/srenner/Code/dcas/public/fonts
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Bold.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Bold.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Bold.woff
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Bold.woff2
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Light.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Light.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Light.woff
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Light.woff2
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Medium.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Medium.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Medium.woff
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Medium.woff2
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Regular.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Regular.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Regular.woff
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Regular.woff2
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Thin.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Thin.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Thin.woff
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/Roboto-Thin.woff2
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/glyphicons-halflings-regular.eot
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/glyphicons-halflings-regular.svg
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/glyphicons-halflings-regular.ttf
+│   │   ├── /Users/srenner/Code/dcas/public/fonts/glyphicons-halflings-regular.woff
+│   │   └── /Users/srenner/Code/dcas/public/fonts/glyphicons-halflings-regular.woff2
+│   ├── /Users/srenner/Code/dcas/public/index.php
+│   ├── /Users/srenner/Code/dcas/public/js
+│   │   ├── /Users/srenner/Code/dcas/public/js/AjaxisBootstrap.js
+│   │   ├── /Users/srenner/Code/dcas/public/js/AjaxisMaterialize.js
+│   │   ├── /Users/srenner/Code/dcas/public/js/app.23addc6bc85e53d75847.js
+│   │   └── /Users/srenner/Code/dcas/public/js/scaffold-interface-js
+│   │       ├── /Users/srenner/Code/dcas/public/js/scaffold-interface-js/customA.js
+│   │       ├── /Users/srenner/Code/dcas/public/js/scaffold-interface-js/main.js
+│   │       └── /Users/srenner/Code/dcas/public/js/scaffold-interface-js/social.js
+│   ├── /Users/srenner/Code/dcas/public/mix-manifest.json
+│   ├── /Users/srenner/Code/dcas/public/robots.txt
+│   └── /Users/srenner/Code/dcas/public/web.config
+├── /Users/srenner/Code/dcas/readme.md
+├── /Users/srenner/Code/dcas/resources
+│   ├── /Users/srenner/Code/dcas/resources/assets
+│   │   ├── /Users/srenner/Code/dcas/resources/assets/coffee
+│   │   ├── /Users/srenner/Code/dcas/resources/assets/js
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/app.js
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/bootstrap.js
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components
+│   │   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components/ChatApp.vue
+│   │   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components/ChatForm.vue
+│   │   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components/ChatMessages.vue
+│   │   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components/OnlineUsers.vue
+│   │   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/components/UserList.vue
+│   │   │   │   └── /Users/srenner/Code/dcas/resources/assets/js/components/passport
+│   │   │   │       ├── /Users/srenner/Code/dcas/resources/assets/js/components/passport/AuthorizedClients.vue
+│   │   │   │       ├── /Users/srenner/Code/dcas/resources/assets/js/components/passport/Clients.vue
+│   │   │   │       └── /Users/srenner/Code/dcas/resources/assets/js/components/passport/PersonalAccessTokens.vue
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/core
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/filters
+│   │   │   ├── /Users/srenner/Code/dcas/resources/assets/js/services
+│   │   │   └── /Users/srenner/Code/dcas/resources/assets/js/stores
+│   │   │       └── /Users/srenner/Code/dcas/resources/assets/js/stores/ChatStore.js
+│   │   ├── /Users/srenner/Code/dcas/resources/assets/less
+│   │   └── /Users/srenner/Code/dcas/resources/assets/sass
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/_variables.scss
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/app.scss
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/components
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/mixins.scss
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/options
+│   │       ├── /Users/srenner/Code/dcas/resources/assets/sass/parts
+│   │       └── /Users/srenner/Code/dcas/resources/assets/sass/tweaks
+│   ├── /Users/srenner/Code/dcas/resources/lang
+│   │   └── /Users/srenner/Code/dcas/resources/lang/en
+│   │       ├── /Users/srenner/Code/dcas/resources/lang/en/auth.php
+│   │       ├── /Users/srenner/Code/dcas/resources/lang/en/pagination.php
+│   │       ├── /Users/srenner/Code/dcas/resources/lang/en/passwords.php
+│   │       └── /Users/srenner/Code/dcas/resources/lang/en/validation.php
+│   └── /Users/srenner/Code/dcas/resources/views
+│       ├── /Users/srenner/Code/dcas/resources/views/auth
+│       │   ├── /Users/srenner/Code/dcas/resources/views/auth/login.blade.php
+│       │   ├── /Users/srenner/Code/dcas/resources/views/auth/passwords
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/auth/passwords/email.blade.php
+│       │   │   └── /Users/srenner/Code/dcas/resources/views/auth/passwords/reset.blade.php
+│       │   └── /Users/srenner/Code/dcas/resources/views/auth/register.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/dashboard.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/datatables-test.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/emails
+│       │   └── /Users/srenner/Code/dcas/resources/views/emails/UponUserLoginLockout.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/exceptions
+│       │   └── /Users/srenner/Code/dcas/resources/views/exceptions/default.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/layouts
+│       │   └── /Users/srenner/Code/dcas/resources/views/layouts/app.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/main
+│       │   └── /Users/srenner/Code/dcas/resources/views/main/roles
+│       │       ├── /Users/srenner/Code/dcas/resources/views/main/roles/create.blade.php
+│       │       ├── /Users/srenner/Code/dcas/resources/views/main/roles/edit.blade.php
+│       │       ├── /Users/srenner/Code/dcas/resources/views/main/roles/index.blade.php
+│       │       └── /Users/srenner/Code/dcas/resources/views/main/roles/show.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/pages
+│       │   └── /Users/srenner/Code/dcas/resources/views/pages/sitemap.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface
+│       │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/dashboard
+│       │   │   └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/dashboard/dashboard.blade.php
+│       │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/layouts
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/layouts/app.blade.php
+│       │   │   └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/layouts/defaultMaterialize.blade.php
+│       │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/permissions
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/permissions/create.blade.php
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/permissions/edit.blade.php
+│       │   │   └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/permissions/index.blade.php
+│       │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/roles
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/roles/create.blade.php
+│       │   │   ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/roles/edit.blade.php
+│       │   │   └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/roles/index.blade.php
+│       │   └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/users
+│       │       ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/users/create.blade.php
+│       │       ├── /Users/srenner/Code/dcas/resources/views/scaffold-interface/users/edit.blade.php
+│       │       └── /Users/srenner/Code/dcas/resources/views/scaffold-interface/users/index.blade.php
+│       ├── /Users/srenner/Code/dcas/resources/views/stripe-test.blade.php
+│       └── /Users/srenner/Code/dcas/resources/views/welcome.blade.php
+├── /Users/srenner/Code/dcas/routes
+│   ├── /Users/srenner/Code/dcas/routes/api.php
+│   ├── /Users/srenner/Code/dcas/routes/channels.php
+│   ├── /Users/srenner/Code/dcas/routes/console.php
+│   ├── /Users/srenner/Code/dcas/routes/web.php
+│   ├── /Users/srenner/Code/dcas/routes/web_authentication.php
+│   ├── /Users/srenner/Code/dcas/routes/web_cashier.php
+│   └── /Users/srenner/Code/dcas/routes/web_impersonate.php
+├── /Users/srenner/Code/dcas/server.php
+├── /Users/srenner/Code/dcas/start-webdriver.sh
+├── /Users/srenner/Code/dcas/tests
+│   ├── /Users/srenner/Code/dcas/tests/ApiTestTrait.php
+│   ├── /Users/srenner/Code/dcas/tests/CreatesApplication.php
+│   ├── /Users/srenner/Code/dcas/tests/Feature
+│   │   └── /Users/srenner/Code/dcas/tests/Feature/ExampleTest.php
+│   ├── /Users/srenner/Code/dcas/tests/Javascript
+│   │   ├── /Users/srenner/Code/dcas/tests/Javascript/helpers
+│   │   │   └── /Users/srenner/Code/dcas/tests/Javascript/helpers/setup-browser-env.js
+│   │   └── /Users/srenner/Code/dcas/tests/Javascript/test-example.js
+│   ├── /Users/srenner/Code/dcas/tests/TestCase.php
+│   ├── /Users/srenner/Code/dcas/tests/Unit
+│   │   └── /Users/srenner/Code/dcas/tests/Unit/ExampleTest.php
+│   ├── /Users/srenner/Code/dcas/tests/_support
+│   │   ├── /Users/srenner/Code/dcas/tests/_support/AcceptanceTester.php
+│   │   ├── /Users/srenner/Code/dcas/tests/_support/ApiTester.php
+│   │   ├── /Users/srenner/Code/dcas/tests/_support/FunctionalTester.php
+│   │   ├── /Users/srenner/Code/dcas/tests/_support/Helper
+│   │   │   ├── /Users/srenner/Code/dcas/tests/_support/Helper/Acceptance.php
+│   │   │   ├── /Users/srenner/Code/dcas/tests/_support/Helper/Api.php
+│   │   │   └── /Users/srenner/Code/dcas/tests/_support/Helper/Functional.php
+│   │   └── /Users/srenner/Code/dcas/tests/_support/_generated
+│   │       ├── /Users/srenner/Code/dcas/tests/_support/_generated/AcceptanceTesterActions.php
+│   │       ├── /Users/srenner/Code/dcas/tests/_support/_generated/ApiTesterActions.php
+│   │       └── /Users/srenner/Code/dcas/tests/_support/_generated/FunctionalTesterActions.php
+│   ├── /Users/srenner/Code/dcas/tests/acceptance
+│   │   ├── /Users/srenner/Code/dcas/tests/acceptance/WelcomeCept.php
+│   │   └── /Users/srenner/Code/dcas/tests/acceptance/_bootstrap.php
+│   ├── /Users/srenner/Code/dcas/tests/acceptance.suite.yml
+│   ├── /Users/srenner/Code/dcas/tests/api
+│   │   └── /Users/srenner/Code/dcas/tests/api/_bootstrap.php
+│   ├── /Users/srenner/Code/dcas/tests/api.suite.yml
+│   ├── /Users/srenner/Code/dcas/tests/functional
+│   │   └── /Users/srenner/Code/dcas/tests/functional/_bootstrap.php
+│   ├── /Users/srenner/Code/dcas/tests/functional.suite.yml
+│   └── /Users/srenner/Code/dcas/tests/traits
+├── /Users/srenner/Code/dcas/webpack.config.js
+└── /Users/srenner/Code/dcas/webpack.mix.js
+
+182 directories, 408 files
