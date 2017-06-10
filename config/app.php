@@ -219,6 +219,7 @@ return [
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
         Spatie\Translatable\TranslatableServiceProvider::class,
+        Msurguy\Honeypot\HoneypotServiceProvider::class,
 
     ],
 
@@ -278,6 +279,7 @@ return [
         'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
         'Flash'        => Laracasts\Flash\Flash::class,
         'Form'         => Collective\Html\FormFacade::class,
+        'Honeypot'     => Msurguy\Honeypot\HoneypotFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
         "LERN"         => Tylercd100\LERN\Facades\LERN::class,
         'Menu'         => Lavary\Menu\Facade::class,
