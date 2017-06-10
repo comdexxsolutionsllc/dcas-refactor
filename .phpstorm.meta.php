@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-06-09.
+    * Generated on 2017-06-10.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -91,6 +91,7 @@ namespace PHPSTORM_META {
             'command.laracasts.seed' instanceof \Laracasts\Generators\Commands\SeedMakeCommand,
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
+            'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -101,6 +102,7 @@ namespace PHPSTORM_META {
             'memcached.connector' instanceof \Illuminate\Cache\MemcachedConnector,
             'redis' instanceof \Illuminate\Redis\RedisManager,
             'redis.connection' instanceof \Illuminate\Redis\Connections\PredisConnection,
+            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Illuminate\Bus\Dispatcher' instanceof \Illuminate\Bus\Dispatcher,
             'command.cache.clear' instanceof \Illuminate\Cache\Console\ClearCommand,
             'command.cache.forget' instanceof \Illuminate\Cache\Console\ForgetCommand,
@@ -176,7 +178,6 @@ namespace PHPSTORM_META {
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
@@ -275,6 +276,7 @@ namespace PHPSTORM_META {
             'command.laracasts.seed' instanceof \Laracasts\Generators\Commands\SeedMakeCommand,
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
+            'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -285,6 +287,7 @@ namespace PHPSTORM_META {
             'memcached.connector' instanceof \Illuminate\Cache\MemcachedConnector,
             'redis' instanceof \Illuminate\Redis\RedisManager,
             'redis.connection' instanceof \Illuminate\Redis\Connections\PredisConnection,
+            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Illuminate\Bus\Dispatcher' instanceof \Illuminate\Bus\Dispatcher,
             'command.cache.clear' instanceof \Illuminate\Cache\Console\ClearCommand,
             'command.cache.forget' instanceof \Illuminate\Cache\Console\ForgetCommand,
@@ -360,7 +363,6 @@ namespace PHPSTORM_META {
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
@@ -459,6 +461,7 @@ namespace PHPSTORM_META {
             'command.laracasts.seed' instanceof \Laracasts\Generators\Commands\SeedMakeCommand,
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
+            'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -469,6 +472,7 @@ namespace PHPSTORM_META {
             'memcached.connector' instanceof \Illuminate\Cache\MemcachedConnector,
             'redis' instanceof \Illuminate\Redis\RedisManager,
             'redis.connection' instanceof \Illuminate\Redis\Connections\PredisConnection,
+            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Illuminate\Bus\Dispatcher' instanceof \Illuminate\Bus\Dispatcher,
             'command.cache.clear' instanceof \Illuminate\Cache\Console\ClearCommand,
             'command.cache.forget' instanceof \Illuminate\Cache\Console\ForgetCommand,
@@ -544,7 +548,6 @@ namespace PHPSTORM_META {
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
@@ -643,6 +646,7 @@ namespace PHPSTORM_META {
             'command.laracasts.seed' instanceof \Laracasts\Generators\Commands\SeedMakeCommand,
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
+            'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -653,6 +657,7 @@ namespace PHPSTORM_META {
             'memcached.connector' instanceof \Illuminate\Cache\MemcachedConnector,
             'redis' instanceof \Illuminate\Redis\RedisManager,
             'redis.connection' instanceof \Illuminate\Redis\Connections\PredisConnection,
+            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Illuminate\Bus\Dispatcher' instanceof \Illuminate\Bus\Dispatcher,
             'command.cache.clear' instanceof \Illuminate\Cache\Console\ClearCommand,
             'command.cache.forget' instanceof \Illuminate\Cache\Console\ForgetCommand,
@@ -728,7 +733,6 @@ namespace PHPSTORM_META {
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
