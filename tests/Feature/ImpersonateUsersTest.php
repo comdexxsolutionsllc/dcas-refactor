@@ -30,4 +30,16 @@ class ImpersonateUsersTest extends TestCase
 
         $this->assertEquals(auth()->user()->id, $user->id);
     }
+
+    /** @test */
+    public function admins_can_unimpersonate_users()
+    {
+        $admin = factory('App\User')->states('admin')->create();
+        $user = factory('App\User')->create();
+
+        $this->actingAs($admin)->get(route('impersonate', $user));
+        $this->get(route('fallbackOriginalAccount', $user));
+
+        $this->assertEquals(auth()->user()->id, $admin->id);
+    }
 }

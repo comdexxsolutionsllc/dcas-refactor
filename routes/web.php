@@ -22,7 +22,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('impersonate/{user}', function (User $user) {
+    session(['previousLoginId' => auth()->user()->id]);
+
     \Auth::login($user);
+
+    flash("You have started impersonating ".auth()->user()->name);
 
     return redirect(route('home'));
 })->middleware(['auth', 'admin'])->name('impersonate');
+
+Route::get('impersonate/{user}/fallback', function () {
+    \Auth::loginUsingId($id = session()->pull('previousLoginId', 'default'));
+
+    flash("You have stopped impersonating a user.");
+
+    return redirect(route('home'));
+})->middleware(['auth'])->name('fallbackOriginalAccount');
