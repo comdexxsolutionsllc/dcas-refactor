@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
                 'name' => $f->name,
                 'email' => $f->unique()->companyEmail,
                 'password' => bcrypt('secret'),
+                'is_admin' => 0,
                 'created_at' => $f->dateTime('now', date_default_timezone_get())
             ]);
         }

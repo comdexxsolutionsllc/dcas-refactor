@@ -11,6 +11,8 @@
 |
 */
 
+use App\User;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('impersonate/{user}', function (User $user) {
+    \Auth::login($user);
+
+    return redirect(route('home'));
+})->middleware(['auth', 'admin'])->name('impersonate');

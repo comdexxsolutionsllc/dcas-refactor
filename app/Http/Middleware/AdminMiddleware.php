@@ -20,7 +20,7 @@ class AdminMiddleware {
     {
         if (Auth::user()->is_admin !== 1)
         {
-            return redirect('home');
+            return abort(403, 'Unauthorized action');
         }
 
         return $next($request);
