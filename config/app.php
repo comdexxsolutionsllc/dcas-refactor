@@ -220,6 +220,7 @@ return [
         Laracasts\Generators\GeneratorsServiceProvider::class,
         Spatie\Translatable\TranslatableServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
+        DCASDomain\Services\HelperServiceProvider::class,
 
     ],
 
