@@ -14,8 +14,14 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <style>
-        #fallbackOriginalAccount a { font-size: 10px; text-decoration: none; }
-        #fallbackOriginalAccount a:hover { background-color: #add8e6; }
+        #fallbackOriginalAccount a {
+            font-size: 10px;
+            text-decoration: none;
+        }
+
+        #fallbackOriginalAccount a:hover {
+            background-color: #add8e6;
+        }
     </style>
 
     @include('partials.pack-js-app-var')
@@ -61,14 +67,14 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 @if(\Session::has('previousLoginId'))
-                                <li>
-                                    <div id="fallbackOriginalAccount" class="alert alert-info" role="alert">
-                                        <a href="{{route('fallbackOriginalAccount', auth()->user())}}">
-                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                            Stop impersonating {{auth()->user()->id}}
-                                        </a>
-                                    </div>
-                                </li>
+                                    <li>
+                                        <div id="fallbackOriginalAccount" class="alert alert-info" role="alert">
+                                            <a href="{{route('fallbackOriginalAccount', auth()->user())}}">
+                                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                                Stop impersonating {{auth()->user()->id}}
+                                            </a>
+                                        </div>
+                                    </li>
                                 @endif
                                 <li>
                                     <a href="{{ route('logout') }}"
