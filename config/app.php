@@ -202,7 +202,7 @@ return [
         Projectmentor\Quota\QuotaServiceProvider::class,
         ArtemSchander\L5Modular\ModuleServiceProvider::class,
         Tylercd100\LERN\LERNServiceProvider::class,
-        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+//        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
@@ -221,6 +221,7 @@ return [
         Spatie\Translatable\TranslatableServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         DCASDomain\Services\HelperServiceProvider::class,
+        Laracademy\Commands\MakeServiceProvider::class,
 
     ],
 

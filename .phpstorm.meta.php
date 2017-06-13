@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-06-12.
+    * Generated on 2017-06-13.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -57,11 +57,6 @@ namespace PHPSTORM_META {
             'rinvex.repository.listener' instanceof \Rinvex\Repository\Listeners\RepositoryEventListener,
             'modules.make' instanceof \ArtemSchander\L5Modular\Console\ModuleMakeCommand,
             'lern' instanceof \Tylercd100\LERN\LERN,
-            'Recca0120\Terminal\Application' instanceof \Recca0120\Terminal\Application,
-            'Recca0120\Terminal\Kernel' instanceof \Recca0120\Terminal\Kernel,
-            'Tracy\BlueScreen' instanceof \Tracy\BlueScreen,
-            'Tracy\Bar' instanceof \Tracy\Bar,
-            'Recca0120\LaravelTracy\DebuggerManager' instanceof \Recca0120\LaravelTracy\DebuggerManager,
             'Barryvdh\Cors\CorsService' instanceof \Barryvdh\Cors\CorsService,
             'infyom.publish' instanceof \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand,
             'infyom.api' instanceof \InfyOm\Generator\Commands\API\APIGeneratorCommand,
@@ -92,6 +87,7 @@ namespace PHPSTORM_META {
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
             'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
+            'command.laracademy.make' instanceof \Laracademy\Commands\Commands\MakeCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -242,11 +238,6 @@ namespace PHPSTORM_META {
             'rinvex.repository.listener' instanceof \Rinvex\Repository\Listeners\RepositoryEventListener,
             'modules.make' instanceof \ArtemSchander\L5Modular\Console\ModuleMakeCommand,
             'lern' instanceof \Tylercd100\LERN\LERN,
-            'Recca0120\Terminal\Application' instanceof \Recca0120\Terminal\Application,
-            'Recca0120\Terminal\Kernel' instanceof \Recca0120\Terminal\Kernel,
-            'Tracy\BlueScreen' instanceof \Tracy\BlueScreen,
-            'Tracy\Bar' instanceof \Tracy\Bar,
-            'Recca0120\LaravelTracy\DebuggerManager' instanceof \Recca0120\LaravelTracy\DebuggerManager,
             'Barryvdh\Cors\CorsService' instanceof \Barryvdh\Cors\CorsService,
             'infyom.publish' instanceof \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand,
             'infyom.api' instanceof \InfyOm\Generator\Commands\API\APIGeneratorCommand,
@@ -277,6 +268,7 @@ namespace PHPSTORM_META {
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
             'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
+            'command.laracademy.make' instanceof \Laracademy\Commands\Commands\MakeCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -427,11 +419,6 @@ namespace PHPSTORM_META {
             'rinvex.repository.listener' instanceof \Rinvex\Repository\Listeners\RepositoryEventListener,
             'modules.make' instanceof \ArtemSchander\L5Modular\Console\ModuleMakeCommand,
             'lern' instanceof \Tylercd100\LERN\LERN,
-            'Recca0120\Terminal\Application' instanceof \Recca0120\Terminal\Application,
-            'Recca0120\Terminal\Kernel' instanceof \Recca0120\Terminal\Kernel,
-            'Tracy\BlueScreen' instanceof \Tracy\BlueScreen,
-            'Tracy\Bar' instanceof \Tracy\Bar,
-            'Recca0120\LaravelTracy\DebuggerManager' instanceof \Recca0120\LaravelTracy\DebuggerManager,
             'Barryvdh\Cors\CorsService' instanceof \Barryvdh\Cors\CorsService,
             'infyom.publish' instanceof \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand,
             'infyom.api' instanceof \InfyOm\Generator\Commands\API\APIGeneratorCommand,
@@ -462,6 +449,7 @@ namespace PHPSTORM_META {
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
             'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
+            'command.laracademy.make' instanceof \Laracademy\Commands\Commands\MakeCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,
@@ -612,11 +600,6 @@ namespace PHPSTORM_META {
             'rinvex.repository.listener' instanceof \Rinvex\Repository\Listeners\RepositoryEventListener,
             'modules.make' instanceof \ArtemSchander\L5Modular\Console\ModuleMakeCommand,
             'lern' instanceof \Tylercd100\LERN\LERN,
-            'Recca0120\Terminal\Application' instanceof \Recca0120\Terminal\Application,
-            'Recca0120\Terminal\Kernel' instanceof \Recca0120\Terminal\Kernel,
-            'Tracy\BlueScreen' instanceof \Tracy\BlueScreen,
-            'Tracy\Bar' instanceof \Tracy\Bar,
-            'Recca0120\LaravelTracy\DebuggerManager' instanceof \Recca0120\LaravelTracy\DebuggerManager,
             'Barryvdh\Cors\CorsService' instanceof \Barryvdh\Cors\CorsService,
             'infyom.publish' instanceof \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand,
             'infyom.api' instanceof \InfyOm\Generator\Commands\API\APIGeneratorCommand,
@@ -647,6 +630,7 @@ namespace PHPSTORM_META {
             'command.laracasts.migrate' instanceof \Laracasts\Generators\Commands\MigrationMakeCommand,
             'command.laracasts.migrate.pivot' instanceof \Laracasts\Generators\Commands\PivotMigrationMakeCommand,
             'honeypot' instanceof \Msurguy\Honeypot\Honeypot,
+            'command.laracademy.make' instanceof \Laracademy\Commands\Commands\MakeCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'Illuminate\Broadcasting\BroadcastManager' instanceof \Illuminate\Broadcasting\BroadcastManager,
             'Illuminate\Contracts\Broadcasting\Broadcaster' instanceof \Illuminate\Broadcasting\Broadcasters\NullBroadcaster,

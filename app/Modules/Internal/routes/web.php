@@ -14,6 +14,9 @@ Route::group(['prefix' => 'internal', 'module' => 'Internal', 'middleware' => ['
     Route::group(['prefix' => 'admin'], function () { //'middleware' => 'admin'
         Route::get('tickets', 'TicketsController@index');
         Route::post('close_ticket/{ticket_id}', 'TicketsController@close');
+        Route::post('open_ticket/{ticket_id}', function() {
+            return true;
+        });
     });
 
     Route::get('/{locale}', function ($locale) {

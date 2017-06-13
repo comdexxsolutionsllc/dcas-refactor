@@ -78,4 +78,14 @@ abstract class BaseModel extends Revisionable implements AuditableContract, HasB
     protected $revisionUnknownString = 'unknown';
 
     public static function boot() { parent::boot(); }
+
+    /**
+     * Utility function to return last row of database.
+     *
+     * @return mixed
+     */
+    protected function last()
+    {
+        return $this::orderBy('created_at', 'desc')->first();
+    }
 }

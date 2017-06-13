@@ -43,14 +43,20 @@
                                         @include('Internal::partials.ticket_status')
                                     </td>
                                     <td>{{ $ticket->updated_at->diffForHumans() }}</td>
+                                    @if(!$ticket->isClosed($ticket, false))
                                     <td>
                                         <a href="{{ url('internal/tickets/' . $ticket->ticket_id) }}" class="btn btn-primary btn-xs">Comment</a>
                                     </td>
+                                    @else
+                                        <td>
+                                            <a class="btn btn-primary btn-xs" disabled>Open to Comment</a>
+                                        </td>
+                                    @endif
                                     <td>
-                                        <form action="{{ url('admin/close_ticket/' . $ticket->ticket_id) }}"
+                                        <form action="{{ url('/internal/admin/'.$ticket->isClosed($ticket)[1].'_ticket/' . $ticket->ticket_id) }}"
                                               method="POST">
                                             {!! csrf_field() !!}
-                                            <button type="submit" class="btn btn-danger btn-xs">Close</button>
+                                            <button type="submit" class="{{$ticket->isClosed($ticket)[2]}}">{{$ticket->isClosed($ticket)[0]}}</button>
                                         </form>
                                     </td>
                                 </tr>

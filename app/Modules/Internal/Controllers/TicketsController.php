@@ -2,12 +2,14 @@
 
 namespace Modules\Internal\Controllers;
 
-use Cache;
+use App\Http\Controllers\Controller;
 use App\NullCategory;
+use App\User;
+use Cache;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Modules\Internal\Emails\AppMailer;
 use Modules\Internal\Models\Category;
 use Modules\Internal\Models\Ticket;
 
@@ -22,7 +24,7 @@ class TicketsController extends Controller {
     {
         $this->middleware('auth');
 
-        $this->categories = \Cache::remember('categories', 15, function() {
+        $this->categories = Cache::remember('categories', 15, function() {
             return Category::all();
         });
     }
@@ -32,9 +34,12 @@ class TicketsController extends Controller {
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function index(User $user, Ticket $ticket)
     {
+        $this->authorize('view', $ticket);
+
         $tickets = Ticket::paginate(10);
+//        dd($tickets);
         $categories = $this->categories;
 
         return view('Internal::tickets.index', compact('tickets', 'categories'));
@@ -58,9 +63,10 @@ class TicketsController extends Controller {
      *
      * @param  Request $request
      *
+     * @param \Modules\Internal\Emails\AppMailer $mailer
      * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request, AppMailer $mailer)
     {
         $this->validate($request, [
             'title'    => 'required',
@@ -156,6 +162,8 @@ class TicketsController extends Controller {
     public function close($ticket_id, AppMailer $mailer)
     {
         $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+
+        $this->authorize('close', $ticket);
 
         $ticket->status = 'Closed';
 

@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
 
-class NullCategory extends Model
+class NullCategory extends BaseModel
 {
     public $name = 'Null Category';
 }

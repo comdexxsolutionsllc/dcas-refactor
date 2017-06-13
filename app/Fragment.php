@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
+use App\BaseModel;
 use Spatie\Translatable\HasTranslations;
 
-class Fragment extends Model
+class Fragment extends BaseModel
 {
     //use HasTranslations;
 

@@ -137,7 +137,7 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      */
     public function isAdministrator()
     {
-        return (\Auth::user()->id == 2); // TODO: Change this to your admin ID
+        return (\Auth::user()->is_admin === 1);
     }
 
 
