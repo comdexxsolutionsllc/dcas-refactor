@@ -19,12 +19,14 @@ Route::group(['prefix' => 'internal', 'module' => 'Internal', 'middleware' => ['
         });
     });
 
-    Route::get('/{locale}', function ($locale) {
-        echo trans('validation.required'); // returns 'This is a required field'
-        echo "<br>";
+    Route::get('test', 'TicketsController@test');
 
-        app()->setLocale('nl');
-
-        echo trans('validation.required'); // returns 'Dit is een verplicht veld'
-    });
+//    Route::get('/{locale}', function ($locale) {
+//        echo trans('validation.required'); // returns 'This is a required field'
+//        echo "<br>";
+//
+//        app()->setLocale('nl');
+//
+//        echo trans('validation.required'); // returns 'Dit is een verplicht veld'
+//    });
 });

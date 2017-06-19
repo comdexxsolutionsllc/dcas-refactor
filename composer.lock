@@ -2326,21 +2326,21 @@
         },
         {
             "name": "larapack/doctrine-support",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larapack/doctrine-support.git",
-                "reference": "a1c155fbe96e6e06bb2561341b3aceefa3302c35"
+                "reference": "f6297c7aa8f10d60e9f247eb439400018af0e5da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larapack/doctrine-support/zipball/a1c155fbe96e6e06bb2561341b3aceefa3302c35",
-                "reference": "a1c155fbe96e6e06bb2561341b3aceefa3302c35",
+                "url": "https://api.github.com/repos/larapack/doctrine-support/zipball/f6297c7aa8f10d60e9f247eb439400018af0e5da",
+                "reference": "f6297c7aa8f10d60e9f247eb439400018af0e5da",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.5",
-                "illuminate/support": "5.3.*|5.4.*"
+                "illuminate/support": "5.3.*|5.4.*|5.5.x-dev"
             },
             "type": "library",
             "autoload": {
@@ -2367,7 +2367,7 @@
                 "laravel",
                 "support"
             ],
-            "time": "2017-01-25T11:39:40+00:00"
+            "time": "2017-06-15T14:42:22+00:00"
         },
         {
             "name": "laravel/cashier",
@@ -2536,16 +2536,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.25",
+            "version": "v5.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a"
+                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a",
-                "reference": "6bcc9b1f542b3deed16d51f6aa1fe318ab407c2a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/66f5e1b37cbd66e730ea18850ded6dc0ad570404",
+                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404",
                 "shasum": ""
             },
             "require": {
@@ -2661,20 +2661,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-06-07T13:35:12+00:00"
+            "time": "2017-06-15T19:08:25+00:00"
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.10",
+            "version": "v2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "cd908e73505f7d3aad101d3177280db952ffc190"
+                "reference": "1e6f56ccf42255e8479d0dcd695619dab6613313"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/cd908e73505f7d3aad101d3177280db952ffc190",
-                "reference": "cd908e73505f7d3aad101d3177280db952ffc190",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/1e6f56ccf42255e8479d0dcd695619dab6613313",
+                "reference": "1e6f56ccf42255e8479d0dcd695619dab6613313",
                 "shasum": ""
             },
             "require": {
@@ -2702,6 +2702,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Passport\\PassportServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -2725,7 +2730,7 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-06-02T21:51:18+00:00"
+            "time": "2017-06-14T21:58:27+00:00"
         },
         {
             "name": "laravel/scout",
@@ -3655,16 +3660,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
                 "shasum": ""
             },
             "require": {
@@ -3685,7 +3690,7 @@
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "~5.3"
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -3729,7 +3734,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13T07:08:03+00:00"
+            "time": "2017-06-19T01:22:40+00:00"
         },
         {
             "name": "msurguy/honeypot",
@@ -4877,16 +4882,16 @@
         },
         {
             "name": "recca0120/laravel-tracy",
-            "version": "v1.8.5",
+            "version": "v1.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-tracy.git",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb"
+                "reference": "31ed24cfd481e7b4bf1e08e74f75cd24f5ea59f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/141ee41f6cc36f4cdc95163b66e6edf015a151bb",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/31ed24cfd481e7b4bf1e08e74f75cd24f5ea59f7",
+                "reference": "31ed24cfd481e7b4bf1e08e74f75cd24f5ea59f7",
                 "shasum": ""
             },
             "require": {
@@ -4903,12 +4908,12 @@
             "require-dev": {
                 "mockery/mockery": "~0.9.4",
                 "nesbot/carbon": "~1.20",
-                "phpunit/phpunit": "~4.8|~5.4"
+                "phpunit/phpunit": "~4.8|~5.4|~6.1"
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/helpers.php"
+                    "src/polyfill.php"
                 ],
                 "psr-4": {
                     "Recca0120\\LaravelTracy\\": "src/"
@@ -4936,20 +4941,20 @@
                 "tracy",
                 "webprofiler"
             ],
-            "time": "2017-03-08T07:27:54+00:00"
+            "time": "2017-06-19T17:08:58+00:00"
         },
         {
             "name": "recca0120/terminal",
-            "version": "v1.6.11",
+            "version": "v1.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-terminal.git",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa"
+                "reference": "5572f90f723407a7cff5016f5db87b700c91249d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/cbb017f8e950642ac8b46e9521d42582e2222ffa",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/5572f90f723407a7cff5016f5db87b700c91249d",
+                "reference": "5572f90f723407a7cff5016f5db87b700c91249d",
                 "shasum": ""
             },
             "require": {
@@ -4996,7 +5001,7 @@
                 "web",
                 "web artisan"
             ],
-            "time": "2017-05-31T14:14:28+00:00"
+            "time": "2017-06-19T17:45:13+00:00"
         },
         {
             "name": "rinvex/repository",
@@ -5353,16 +5358,16 @@
         },
         {
             "name": "spatie/laravel-tags",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-tags.git",
-                "reference": "a8c08e1d05b51b925ccd8a24b15309f98e57d328"
+                "reference": "bc43929e72aa024fce67648a7e08cc8c80114eeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-tags/zipball/a8c08e1d05b51b925ccd8a24b15309f98e57d328",
-                "reference": "a8c08e1d05b51b925ccd8a24b15309f98e57d328",
+                "url": "https://api.github.com/repos/spatie/laravel-tags/zipball/bc43929e72aa024fce67648a7e08cc8c80114eeb",
+                "reference": "bc43929e72aa024fce67648a7e08cc8c80114eeb",
                 "shasum": ""
             },
             "require": {
@@ -5379,6 +5384,13 @@
                 "phpunit/phpunit": "5.*"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Tags\\TagsServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Spatie\\Tags\\": "src"
@@ -5402,7 +5414,7 @@
                 "laravel-tags",
                 "spatie"
             ],
-            "time": "2017-05-23T09:38:49+00:00"
+            "time": "2017-06-18T15:33:22+00:00"
         },
         {
             "name": "spatie/laravel-tail",
@@ -5743,16 +5755,16 @@
         },
         {
             "name": "sven/artisan-view",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/svenluijten/artisan-view.git",
-                "reference": "5daea7329665dda2e244a79a39f96c0488186995"
+                "reference": "6121bded15b5cebc5e8c893216e772c4e49dcf2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/svenluijten/artisan-view/zipball/5daea7329665dda2e244a79a39f96c0488186995",
-                "reference": "5daea7329665dda2e244a79a39f96c0488186995",
+                "url": "https://api.github.com/repos/svenluijten/artisan-view/zipball/6121bded15b5cebc5e8c893216e772c4e49dcf2a",
+                "reference": "6121bded15b5cebc5e8c893216e772c4e49dcf2a",
                 "shasum": ""
             },
             "require": {
@@ -5763,6 +5775,13 @@
                 "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sven\\ArtisanView\\ArtisanViewServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Sven\\ArtisanView\\": "src/"
@@ -5786,7 +5805,7 @@
                 "templates",
                 "views"
             ],
-            "time": "2017-02-02T07:53:09+00:00"
+            "time": "2017-06-19T10:37:08+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

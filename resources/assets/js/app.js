@@ -7,8 +7,6 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue/dist/vue.min');
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -29,6 +27,13 @@ Vue.component(
     'passport-personal-access-tokens',
     require('./components/passport/PersonalAccessTokens.vue')
 );
+
+Vue.component('flash', require('./components/Flash.vue'));
+Vue.component('paginator', require('./components/Paginator.vue'));
+Vue.component('user-notifications', require('./components/UserNotifications.vue'));
+Vue.component('tickets', require('./components/Tickets.vue'));
+Vue.component('ticket', require('./components/Ticket.vue'));
+Vue.component('response-form', require('./components/ResponseForm.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -175,4 +175,13 @@ class TicketsController extends Controller {
 
         return redirect()->back()->with("status", "The ticket has been closed.");
     }
+
+    /**
+     * Test
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function test()
+    {
+        return view('Internal::test');
+    }
 }

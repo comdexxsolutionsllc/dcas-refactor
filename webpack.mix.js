@@ -13,7 +13,10 @@ const {mix} = require('laravel-mix');
 
 
 mix.copy('app/DCASDomain/VueJS/components', 'resources/assets/js/components')
-    .js(['resources/assets/js/app.js', 'app/DCASDomain/VueJS/site.js'], 'public/js')
+    .js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .version()
     .browserSync({proxy: 'dcas-refactor.dev'});
+
+if (mix.config.inProduction) {
+    mix.version();
+}
