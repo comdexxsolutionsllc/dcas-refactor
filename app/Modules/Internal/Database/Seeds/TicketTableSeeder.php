@@ -39,12 +39,12 @@ class TicketTableSeeder extends Seeder
                 'user_id' => $f->randomElements($user->pluck('id')->toArray(), 1)[0],
                 'category_id' => $f->randomElements($category->pluck('id')->toArray(), 1)[0],
                 'ticket_id' => TicketId::Generate(),
-                'title' => substr($f->sentence(), 0, 49),
+                'title' => rtrim(substr($f->sentence(), 0, 49), '.'),
                 'priority' => $f->randomElements($priorities, 1)[0],
                 'message' => $f->paragraph(),
                 'status' => $f->randomElements($statuses, 1)[0],
-                'created_at' => $f->dateTime('now', date_default_timezone_get()),
-                'updated_at' => $f->dateTime('now', date_default_timezone_get())
+                'created_at' => $f->dateTimeBetween($startDate = '-5 weeks', $endDate = 'now'),
+                'updated_at' => null
             ]);
         }
     }

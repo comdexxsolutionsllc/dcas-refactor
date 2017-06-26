@@ -15,7 +15,22 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-                Schema::defaultStringLength(191);
+        Schema::defaultStringLength(191);
+
+        app()->bind('League\Fractal\Manager', function () {
+            $fractal = new \League\Fractal\Manager;
+            $serializer = new \League\Fractal\Serializer\ArraySerializer();
+
+            $fractal->setSerializer($serializer);
+
+            return $fractal;
+        });
+
+        app()->bind('\Dingo\Api\Transformer\Adapter\Fractal', function () {
+            $fractal = app()->make('\League\Fractal\Manager');
+
+            return new \Dingo\Api\Transformer\Adapter\Fractal($fractal);
+        });
     }
 
     /**

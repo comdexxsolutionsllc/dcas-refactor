@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -17779,13 +17779,71 @@ var _collection2 = _interopRequireDefault(_collection);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var moment = __webpack_require__(0);
+
+Vue.filter('formatDate', function (value) {
+    if (value) {
+        return moment(String(value)).fromNow();
+    }
+});
+
 exports.default = {
     components: {
         Ticket: _Ticket2.default, ResponseForm: _ResponseForm2.default
     },
     mixins: [_collection2.default],
     data: function data() {
-        return { tickets: [] };
+        return {
+            tickets: []
+        };
     },
     created: function created() {
         this.fetchData();
@@ -17803,45 +17861,7 @@ exports.default = {
             });
         }
     }
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+};
 
 /***/ }),
 /* 154 */
@@ -18748,8 +18768,6 @@ exports.default = {
 
 
 window._ = __webpack_require__(169);
-
-window.moment = __webpack_require__(0);
 
 window.Pusher = __webpack_require__(172);
 
@@ -21246,7 +21264,7 @@ exports.push([module.i, "\n.action-link[data-v-26b4b976] {\n    cursor: pointer;
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 163 */
@@ -53745,14 +53763,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "panel panel-default"
     }, [_c('div', {
       staticClass: "panel-heading"
-    }, [_vm._v(_vm._s(ticket.title))]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\n                            " + _vm._s(ticket.title) + " created "), _c('strong', [_vm._v(_vm._s(_vm._f("formatDate")(ticket.created_at)))]), _vm._v("\n                            by "), _c('em', [_vm._v(_vm._s(ticket.user.name))])]), _vm._v(" "), _c('div', {
       staticClass: "panel-body"
-    }, [_vm._v("\n                            " + _vm._s(ticket.message) + "\n                        ")]), _vm._v(" "), _c('hr'), _vm._v(" "), _vm._m(0, true)])])])])])
+    }, [_vm._v("\n                            " + _vm._s(ticket.message) + "\n                        ")]), _vm._v(" "), _c('hr'), _vm._v(" "), _vm._m(0, true), _vm._v(" "), _vm._l((ticket.comments), function(comment, index) {
+      return _c('div', {
+        key: comment.id,
+        staticClass: "panel-body"
+      }, [_c('div', {
+        attrs: {
+          "id": "comments"
+        }
+      }, [_c('h3', [_vm._v(_vm._s(comment.comment))])])])
+    }), _vm._v(" "), _vm._m(1, true)], 2)])])])])
   }))
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "panel-body"
-  }, [_c('h3', [_vm._v("Comment goes here")]), _vm._v(" "), _c('div', {
+    staticClass: "col-sm-6 col-md-4"
+  }, [_c('h3', [_vm._v("Comments")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "panel-footer"
   }, [_c('form', {
     attrs: {
@@ -53762,23 +53791,27 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "form-group"
   }, [_c('label', {
+    staticStyle: {
+      "padding-right": "5px",
+      "padding-bottom": "15px"
+    },
     attrs: {
-      "for": "email"
+      "for": "reply"
     }
-  }, [_c('span', {
-    staticClass: "glyphicon glyphicon-envelope"
-  }), _vm._v(" Email")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("Reply")]), _c('span', {
+    staticClass: "glyphicon glyphicon-comment"
+  }), _vm._v(" "), _c('input', {
     staticClass: "form-control",
     attrs: {
       "type": "text",
-      "id": "email"
+      "id": "reply"
     }
   })]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-default",
     attrs: {
       "type": "submit"
     }
-  }, [_vm._v("Submit")])])])])
+  }, [_vm._v("Submit")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

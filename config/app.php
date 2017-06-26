@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://dcas.dev'),
+    'url' => env('APP_URL', 'http://dcas-refactor.dev'),
 
     /*
     |--------------------------------------------------------------------------
@@ -222,6 +222,7 @@ return [
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         DCASDomain\Services\HelperServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
+        Dingo\Api\Provider\LaravelServiceProvider::class
 
     ],
 

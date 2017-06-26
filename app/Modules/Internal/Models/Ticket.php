@@ -9,7 +9,7 @@ use DCASDomain\Traits\UuidForKey;
 
 class Ticket extends BaseModel
 {
-//    use UuidForKey;
+    use UuidForKey;
 
     protected $fillable = [
         'user_id',

@@ -83,10 +83,10 @@
             </div>
         </div>
     </nav>
+    @include('partials.is_impersonating')
 
     @yield('content')
 </div>
 <script src="{{ mix('/js/app.js') }}"></script>
-<script src="{{ mix('/js/site.js') }}"></script>
 </body>
 </html>

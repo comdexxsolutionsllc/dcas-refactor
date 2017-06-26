@@ -12,6 +12,11 @@
 */
 
 use App\User;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Pagination\Cursor;
+use Illuminate\Support\Facades\Input;
+use Modules\Internal\Models\Ticket;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,7 +46,7 @@ Route::get('impersonate/{user}', function (User $user) {
 
     \Auth::login($user);
 
-    flash("You have started impersonating ".auth()->user()->name);
+    flash("You have started impersonating " . auth()->user()->name);
 
     return redirect(route('home'));
 })->middleware(['auth', 'admin'])->name('impersonate');
@@ -53,3 +58,15 @@ Route::get('impersonate/{user}/fallback', function () {
 
     return redirect(route('home'));
 })->middleware(['auth'])->name('fallbackOriginalAccount');
+
+// API
+$api = app('Dingo\Api\Routing\Router');
+$api->version('v1', function ($api) {
+
+    $api->get('test', function () {
+        return fractal()->collection(\Modules\Internal\Models\Ticket::all())
+            ->transformWith(new \App\Transformers\TicketTransformer())
+            ->toArray();
+    });
+
+});

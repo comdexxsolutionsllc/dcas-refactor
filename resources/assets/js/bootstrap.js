@@ -1,8 +1,6 @@
 
 window._ = require('lodash');
 
-window.moment = require('moment');
-
 window.Pusher = require('pusher-js');
 
 

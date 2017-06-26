@@ -12,6 +12,7 @@
         "barryvdh/laravel-debugbar": "^2.3",
         "cmgmyr/messenger": "2.13.*",
         "cybercog/laravel-ban": "^2.1",
+        "dingo/api": "1.0.*@dev",
         "doctrine/dbal": "^2.5",
         "dompdf/dompdf": "v0.7.0",
         "evercode1/view-maker": "^3.5",

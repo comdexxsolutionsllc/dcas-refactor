@@ -148,7 +148,7 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      */
     public function isImpersonating()
     {
-        return Session::has('impersonate');
+        return Session::has('previousLoginId');
     }
 
 
