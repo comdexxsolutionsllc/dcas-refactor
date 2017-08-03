@@ -14,14 +14,8 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <style>
-        #fallbackOriginalAccount a {
-            font-size: 10px;
-            text-decoration: none;
-        }
-
-        #fallbackOriginalAccount a:hover {
-            background-color: #add8e6;
-        }
+        #fallbackOriginalAccount a { font-size: 10px; text-decoration: none; }
+        #fallbackOriginalAccount a:hover { background-color: #add8e6; }
     </style>
 
     @include('partials.pack-js-app-var')

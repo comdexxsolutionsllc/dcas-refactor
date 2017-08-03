@@ -2,15 +2,13 @@
 
 namespace App;
 
-use Carbon\Carbon;
 use Cmgmyr\Messenger\Traits\Messagable;
-use Illuminate\Notifications\Notifiable;
-use Session;
-use OwenIt\Auditing\Auditable;
-use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 use Cog\Ban\Contracts\HasBans as HasBansContract;
 use Cog\Ban\Traits\HasBans;
+use Illuminate\Notifications\Notifiable;
 use Nicolaslopezj\Searchable\SearchableTrait;
+use OwenIt\Auditing\Auditable;
+use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
 use Venturecraft\Revisionable\Revisionable;
 use Venturecraft\Revisionable\RevisionableTrait;
 use Watson\Rememberable\Rememberable;
@@ -77,7 +75,10 @@ abstract class BaseModel extends Revisionable implements AuditableContract, HasB
      */
     protected $revisionUnknownString = 'unknown';
 
-    public static function boot() { parent::boot(); }
+    public static function boot()
+    {
+        parent::boot();
+    }
 
     /**
      * Utility function to return last row of database.

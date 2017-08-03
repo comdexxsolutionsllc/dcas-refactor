@@ -50,6 +50,7 @@
         "recca0120/laravel-tracy": "^1.8",
         "rinvex/repository": "2.0.*",
         "silber/bouncer": "v1.0.0-beta.2",
+        "spatie/array-to-xml": "^2.5",
         "spatie/laravel-cookie-consent": "^1.8",
         "spatie/laravel-fractal": "^3.0.0",
         "spatie/laravel-tags": "^1.3",

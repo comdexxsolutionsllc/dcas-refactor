@@ -3,7 +3,7 @@
 namespace App\Transformers;
 
 use League\Fractal\TransformerAbstract;
-use App\Entities\Comment;
+use Modules\Internal\Models\Comment;
 
 /**
  * Class CommentTransformer
@@ -30,9 +30,10 @@ class CommentTransformer extends TransformerAbstract
                     'uri' => '/comments/' . $model->id,
                 ]
             ],
-            'dates' => (object) [
+            'dates' => (object)[
                 'created' => date('Y-m-d H:i', strtotime($model->created_at)),
                 'updated' => date('Y-m-d H:i', strtotime($model->updated_at))
             ]
+        ];
     }
 }

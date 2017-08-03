@@ -12,10 +12,6 @@
 */
 
 use App\User;
-use League\Fractal\Resource\Collection;
-use League\Fractal\Pagination\Cursor;
-use Illuminate\Support\Facades\Input;
-use Modules\Internal\Models\Ticket;
 
 
 Route::get('/', function () {
@@ -64,9 +60,10 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function ($api) {
 
     $api->get('test', function () {
-        return fractal()->collection(\Modules\Internal\Models\Ticket::all())
-            ->transformWith(new \App\Transformers\TicketTransformer())
-            ->toArray();
+        $collection = \Modules\Internal\Models\Ticket::find(1);
+        $transformer = new \App\Transformers\TicketTransformer;
+
+        return fractal_item($collection, $transformer)->toArray();
     });
 
 });

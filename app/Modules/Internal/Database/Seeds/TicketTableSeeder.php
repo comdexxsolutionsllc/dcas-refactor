@@ -44,7 +44,7 @@ class TicketTableSeeder extends Seeder
                 'message' => $f->paragraph(),
                 'status' => $f->randomElements($statuses, 1)[0],
                 'created_at' => $f->dateTimeBetween($startDate = '-5 weeks', $endDate = 'now'),
-                'updated_at' => null
+                'updated_at' => $f->dateTimeBetween($startDate = 'now', $endDate = 'now'),
             ]);
         }
     }

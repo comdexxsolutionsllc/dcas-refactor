@@ -148,6 +148,8 @@ class TicketsController extends Controller {
         $tickets = Ticket::where('user_id', Auth::user()->id)->paginate(10);
         $categories = $this->categories;
 
+//        dd($tickets->render()); // render
+
         return view('Internal::tickets.user_tickets', compact('tickets', 'categories'));
     }
 

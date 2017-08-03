@@ -19,7 +19,8 @@ class TicketTransformer extends TransformerAbstract
      * @var array
      */
     protected $defaultIncludes = [
-        'user'
+        'user',
+//        'meta'
     ];
 
 
@@ -43,13 +44,7 @@ class TicketTransformer extends TransformerAbstract
                     'status' => (string)$model->status
                 ],
             ],
-            'links' => [
-                [
-                    'rel' => 'self',
-                    'uri' => '/tickets/' . $model->ticket_id,
-                ]
-            ],
-            'dates' => (object) [
+            'dates' => (object)[
                 'created' => date('Y-m-d H:i', strtotime($model->created_at)),
                 'updated' => date('Y-m-d H:i', strtotime($model->updated_at))
             ]
@@ -67,5 +62,16 @@ class TicketTransformer extends TransformerAbstract
         $user = $ticket->user;
 
         return $this->item($user, new UserTransformer);
+    }
+
+    /**
+     * Include Meta data
+     *
+     * @param Ticket $model
+     * @return \League\Fractal\Resource\Item
+     */
+    public function includeMeta(Ticket $model)
+    {
+//        return $this->item($meta, null);
     }
 }
