@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-08-07.
+    * Generated on 2017-08-30.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -74,7 +74,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -276,7 +275,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -478,7 +476,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -680,7 +677,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -882,7 +878,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -1084,7 +1079,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
@@ -1286,7 +1280,6 @@ namespace PHPSTORM_META {
         'infyom.rollback' => \InfyOm\Generator\Commands\RollbackGeneratorCommand::class,
         'infyom.vuejs' => \InfyOm\Generator\Commands\VueJs\VueJsGeneratorCommand::class,
         'infyom.publish.vuejs' => \InfyOm\Generator\Commands\Publish\VueJsLayoutPublishCommand::class,
-        'command.eloquentfilter.make' => \EloquentFilter\Commands\MakeEloquentFilter::class,
         'Spatie\UrlSigner\UrlSigner' => \Spatie\UrlSigner\Laravel\UrlSigner::class,
         'Cog\Ban\Contracts\Ban' => \Cog\Ban\Models\Ban::class,
         'Cog\Ban\Contracts\BanService' => \Cog\Ban\Services\BanService::class,
